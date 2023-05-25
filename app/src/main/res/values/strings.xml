@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- loginfragment strings -->
 
-	<string name="app_name">Page 1</string>
-	<string name="ek_img_content">ExportKit Image</string>
 	<string name="login_ek1_string">Login</string>
 	<string name="login_ek2_string">Login</string>
 	<string name="new_here__register_string">New Here? Register</string>
@@ -21,5 +18,9 @@
 	<string name="moderate_string">Moderate</string>
 	<string name="high_string">High</string>
 	<string name="login_string">Submit</string>
+
+	<string name="send_report_string">Send report</string>
+	<string name="manage_risk_string">Manage Risk</string>
+	<string name="home_string">Home</string>
 
 </resources>
