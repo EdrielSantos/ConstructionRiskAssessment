@@ -23,7 +23,6 @@
 	<color name="ellipse_1_color">#FFFBFB</color>
 	<color name="login_color">#111010</color>
 
-<<<<<<< HEAD
 	<color name="_bg__reportlistfragment_ek2_color">#FFFFFF</color>
 	<color name="rectangle_11_color">#FFE609</color>
 	<color name="risk_assessment_color">#000000</color>
@@ -31,11 +30,8 @@
 	<color name="_bg__riskassessmentfragment_ek2_color">#FFE609</color>
 	<color name="report_1_color">#000000</color>
 	<color name="ellipse_6_color">#FFFBFB</color>
-	<color name="login_color">#111010</color>
-=======
+
 	<color name="_bg__homefragment_ek2_color">#FFFFFF</color>
 	<color name="send_report_color">#000000</color>
->>>>>>> aa2d5bd (Delete commits)
-
 
 </resources>

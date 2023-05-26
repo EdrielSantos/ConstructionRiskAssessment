@@ -18,7 +18,7 @@ class RiskAssessmentFragment: Fragment() {
 		container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View? {
-		return inflater.inflate(R.layout.fragment_riskAssessment, container, false)
+		return inflater.inflate(R.layout.fragment_riskassessment, container, false)
 	}
 }
 	

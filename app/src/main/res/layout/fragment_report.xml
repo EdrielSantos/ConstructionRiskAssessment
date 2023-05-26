@@ -1,197 +1,217 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent" android:layout_height="wrap_content" >
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:id="@+id/page_reportfragment_ek1"
+			android:layout_marginTop="0dp"
+			android:layout_marginStart="0dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="0dp"
+			android:background="@drawable/_bg__reportfragment_ek2_shape"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
 
 
-			<RelativeLayout android:id="@+id/page_reportfragment_ek1"
-				android:layout_marginTop="0dp"
+			<ImageView
+				android:id="@+id/crack_1"
+				android:src="@drawable/crack_1"
+				android:contentDescription="crack_1"
 				android:layout_marginStart="0dp"
+				android:layout_marginTop="485dp"
+				android:layout_width="411dp"
+				android:layout_height="261dp" />
+
+			<ImageView
+				android:id="@+id/truck_1"
+				android:src="@drawable/truck_1"
+				android:contentDescription="truck_1"
+				android:layout_marginStart="25dp"
+				android:layout_marginTop="165dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+			<TextView
+				android:id="@+id/send_your_report"
+				android:textStyle="bold|italic"
+				android:textSize="36sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="63dp"
+				android:layout_marginTop="69dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginLeft="0dp">
+				android:text="@string/send_your_report_string"
+				/>
 
-				<View   android:id="@+id/_bg__reportfragment_ek2"
-					android:background="@drawable/_bg__reportfragment_ek2_shape"
-					 android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
-					android:layout_width="411dp"
-					android:layout_height="823dp"
-					android:layout_marginLeft="0dp" />
+			<View
+				android:id="@+id/line_1"
+				android:background="@drawable/line_1_shape"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="159dp"
+				android:layout_width="411dp"
+				android:layout_height="1dp" />
 
-				<ImageView android:id="@+id/crack_1"
-					android:src="@drawable/crack_1"
-					android:contentDescription="crack_1"
-					 android:layout_marginStart="0dp"
-					android:layout_marginTop="485dp"
-					android:layout_width="411dp"
-					android:layout_height="261dp" />
+			<Button
+				android:id="@+id/rectangle_9"
+				android:background="@drawable/rectangle_9"
+				android:contentDescription="rectangle_9"
+				android:layout_marginStart="122dp"
+				android:layout_marginTop="183dp"
+				android:layout_width="168dp"
+				android:layout_height="152dp" />
 
-				<ImageView android:id="@+id/truck_1"
-					android:src="@drawable/truck_1"
-					android:contentDescription="truck_1"
-					 android:layout_marginStart="25dp"
-					android:layout_marginTop="165dp"
-					android:layout_width="348dp"
-					android:layout_height="214dp" />
+			<TextView android:id="@+id/upload_image"
+				android:textStyle="bold"
+				android:textSize="30sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="108dp"
+				android:layout_marginTop="319dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/upload_image_string"
+				/>
 
-				<TextView android:id="@+id/send_your_report"
-					android:textStyle="bold|italic"
-					android:textSize="36sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="63dp"
-					android:layout_marginTop="69dp"
-					android:layout_width="387dp"
-					android:layout_height="100dp"
-					android:text="@string/send_your_report_string"
-					 />
+			<TextView android:id="@+id/type_of_hazard_"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="24dp"
+				android:layout_marginTop="375dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/type_of_hazard__string"
+				/>
 
-				<View   android:id="@+id/line_1"
-					android:background="@drawable/line_1_shape"
-					 android:layout_marginStart="0dp"
-					android:layout_marginTop="159dp"
-					android:layout_width="411dp"
-					android:layout_height="1dp" />
+			<EditText
+				android:id="@+id/hazard_edTxt"
+				android:inputType="text"
+				android:hint="Enter type of hazard"
+				android:ems="17"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="23dp"
+				android:layout_marginTop="390dp" />
 
-				<ImageView android:id="@+id/rectangle_9"
-					android:src="@drawable/rectangle_9"
-					android:contentDescription="rectangle_9"
-					 android:layout_marginStart="122dp"
-					android:layout_marginTop="183dp"
-					android:layout_width="168dp"
-					android:layout_height="152dp" />
+			<TextView
+				android:id="@+id/description_"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="24dp"
+				android:layout_marginTop="441dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/description__string"
+				/>
 
-				<TextView android:id="@+id/upload_image"
-					android:textStyle="bold"
-					android:textSize="30sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="108dp"
-					android:layout_marginTop="319dp"
-					android:layout_width="234dp"
-					android:layout_height="66dp"
-					android:text="@string/upload_image_string"
-					 />
+			<EditText
+				android:id="@+id/description_edTxt"
+				android:inputType="text"
+				android:hint="Enter description"
+				android:ems="17"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="23dp"
+				android:layout_marginTop="460dp" />
 
-				<TextView android:id="@+id/type_of_hazard_"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="24dp"
-					android:layout_marginTop="375dp"
-					android:layout_width="120dp"
-					android:layout_height="31dp"
-					android:text="@string/type_of_hazard__string"
-					 />
+			<TextView android:id="@+id/severity_level_"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="23dp"
+				android:layout_marginTop="507dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/severity_level__string"
+				/>
 
-				<View   android:id="@+id/line_2"
-					android:background="@drawable/line_2_shape"
-					 android:layout_marginStart="23dp"
-					android:layout_marginTop="421dp"
-					android:layout_width="350dp"
-					android:layout_height="1dp" />
+			<RadioGroup
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="540dp"
+				android:checkedButton="@id/low_btn"
+				>
 
-				<TextView android:id="@+id/description_"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="24dp"
-					android:layout_marginTop="441dp"
-					android:layout_width="99dp"
-					android:layout_height="31dp"
-					android:text="@string/description__string"
-					 />
-
-				<TextView android:id="@+id/severity_level_"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="23dp"
-					android:layout_marginTop="507dp"
-					android:layout_width="116dp"
-					android:layout_height="31dp"
-					android:text="@string/severity_level__string"
-					 />
-
-				<View   android:id="@+id/line_3"
-					android:background="@drawable/line_3_shape"
-					 android:layout_marginStart="23dp"
-					android:layout_marginTop="487dp"
-					android:layout_width="350dp"
-					android:layout_height="1dp" />
-
-				<View   android:id="@+id/ellipse_1"
-					android:background="@drawable/ellipse_1_shape"
-					 android:layout_marginStart="38dp"
-					android:layout_marginTop="548dp"
-					android:layout_width="20dp"
-					android:layout_height="19dp" />
-
-				<View   android:id="@+id/ellipse_2"
-					android:background="@drawable/ellipse_2_shape"
-					 android:layout_marginStart="38dp"
-					android:layout_marginTop="580dp"
-					android:layout_width="20dp"
-					android:layout_height="19dp" />
-
-				<View   android:id="@+id/ellipse_3"
-					android:background="@drawable/ellipse_3_shape"
-					 android:layout_marginStart="38dp"
-					android:layout_marginTop="612dp"
-					android:layout_width="20dp"
-					android:layout_height="19dp" />
-
-				<TextView android:id="@+id/low"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="72dp"
-					android:layout_marginTop="546dp"
-					android:layout_width="49dp"
-					android:layout_height="31dp"
-					android:text="@string/low_string"
-					 />
-
-				<TextView android:id="@+id/moderate"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="72dp"
-					android:layout_marginTop="578dp"
-					android:layout_width="84dp"
-					android:layout_height="31dp"
-					android:text="@string/moderate_string"
-					 />
-
-				<TextView android:id="@+id/high"
-					android:textStyle="bold"
-					android:textSize="14sp"
-					android:textColor="@color/send_your_report_color"
-					android:layout_marginLeft="72dp"
-					android:layout_marginTop="610dp"
-					android:layout_width="53dp"
-					android:layout_height="31dp"
-					android:text="@string/high_string"
-					 />
-
-
-				<RelativeLayout android:id="@+id/frame_1"
-					android:layout_marginTop="710dp"
-					android:layout_marginStart="118dp"
+				<RadioButton
+					android:id="@+id/low_btn"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					>
+					android:layout_marginStart="30dp"
+					/>
 
-					<TextView android:id="@+id/login"
-						android:textSize="36sp"
-						android:textColor="@color/login_color"
-						android:layout_marginLeft="20dp"
-						android:layout_marginTop="10dp"
-						android:layout_width="176dp"
-						android:layout_height="74dp"
-						android:text="@string/login_string"
-						 />
+				<RadioButton
+					android:id="@+id/moderate_btn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="30dp"/>
 
-				</RelativeLayout>
+				<RadioButton
+					android:id="@+id/high_btn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="30dp"/>
 
-			</RelativeLayout>
+			</RadioGroup>
+
+
+			<TextView android:id="@+id/low"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="72dp"
+				android:layout_marginTop="546dp"
+				android:layout_width="49dp"
+				android:layout_height="31dp"
+				android:text="@string/low_string"
+				/>
+
+			<TextView android:id="@+id/moderate"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="72dp"
+				android:layout_marginTop="578dp"
+				android:layout_width="84dp"
+				android:layout_height="31dp"
+				android:text="@string/moderate_string"
+				/>
+
+			<TextView android:id="@+id/high"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="@color/send_your_report_color"
+				android:layout_marginLeft="72dp"
+				android:layout_marginTop="610dp"
+				android:layout_width="53dp"
+				android:layout_height="31dp"
+				android:text="@string/high_string"
+				/>
+
+
+			<Button android:id="@+id/login"
+				android:textSize="36sp"
+				android:textColor="@color/login_color"
+				android:layout_marginLeft="125dp"
+				android:layout_marginTop="620dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/login_string"
+				/>
+
+
+		</RelativeLayout>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>

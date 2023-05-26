@@ -2,10 +2,10 @@
 <!-- line_1 from your XD file. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 	android:shape="rectangle" >
-<<<<<<< HEAD
+
 	<solid android:color="@color/risk_assessment_color" />
-=======
+
 	<solid android:color="@color/send_your_report_color" />
->>>>>>> aa2d5bd (Delete commits)
+
 </shape>
 
