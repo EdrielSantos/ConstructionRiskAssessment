@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.constructionriskassessment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.constructionriskassessment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.constructionriskassessment.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/reportListFragment"
+        android:name="com.example.constructionriskassessment.ReportListFragment"
+        android:label="fragment_reportlist"
+        tools:layout="@layout/fragment_reportlist" >
+        <action
+            android:id="@+id/action_reportListFragment_to_riskAssessmentFragment"
+            app:destination="@id/riskAssessmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/riskAssessmentFragment"
+        android:name="com.example.constructionriskassessment.RiskAssessmentFragment"
+        android:label="fragment_riskassessment"
+        tools:layout="@layout/fragment_riskassessment" >
+        <action
+            android:id="@+id/action_riskAssessmentFragment_to_reportListFragment"
+            app:destination="@id/reportListFragment" />
+    </fragment>
+</navigation>
