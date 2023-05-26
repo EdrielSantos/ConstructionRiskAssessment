@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 
 
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.constructionriskassessment.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -22,7 +23,11 @@ class HomeFragment : Fragment() {
 		val binding = DataBindingUtil.inflate<FragmentHomeBinding>(inflater, R.layout.fragment_home, container, false)
 
 		binding.sendReportBtn.setOnClickListener {
-			Toast.makeText(requireContext(), "Button Pressed", Toast.LENGTH_SHORT).show()
+			it.findNavController().navigate(R.id.action_homeFragment2_to_reportFragment)
+		}
+
+		binding.manageRiskBtn.setOnClickListener {
+			it.findNavController().navigate(R.id.action_homeFragment2_to_reportListFragment)
 		}
 
 		return binding.root

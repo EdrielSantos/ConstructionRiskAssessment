@@ -36,4 +36,5 @@
 	<string name="send_report_string">Send report</string>
 	<string name="manage_risk_string">Manage Risk</string>
 	<string name="home_string">Home</string>
+    <string name="app_label">Construction Risk Assessment</string>
 </resources>
