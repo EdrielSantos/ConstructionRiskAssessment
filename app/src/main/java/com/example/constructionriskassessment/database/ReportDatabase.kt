@@ -22,6 +22,4 @@ abstract class ReportDatabase: RoomDatabase() {
             }
         }
     }
-
-
 }

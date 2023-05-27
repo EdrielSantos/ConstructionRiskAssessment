@@ -22,5 +22,4 @@ class ReportViewModel(private val dao: ReportDAO): ViewModel() {
         dao.updateReport(report)
     }
 
-
 }
