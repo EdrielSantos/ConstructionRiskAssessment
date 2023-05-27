@@ -31,8 +31,8 @@ class RecyclerViewAdapter: RecyclerView.Adapter<ViewHolder>() {
 class ViewHolder(val view:View): RecyclerView.ViewHolder(view){
     val myImageView = view.findViewById<ImageView>(R.id.list_img)
     val myButton = view.findViewById<Button>(R.id.list_btn)
-    fun nav(){
-        myButton.setOnClickListener {
+    private fun nav(){
+        view.setOnClickListener{
             it.findNavController().navigate(R.id.action_reportListFragment_to_riskAssessmentFragment)
         }
     }

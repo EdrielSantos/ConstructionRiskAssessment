@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 
 import android.view.View;
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.databinding.DataBindingUtil
@@ -23,7 +24,8 @@ class ReportListFragment: Fragment() {
 	): View? {
 		val binding = DataBindingUtil.inflate<FragmentReportlistBinding>(inflater, R.layout.fragment_reportlist, container, false)
 		val recyclerView = binding.recyclerView1
-		recyclerView.layoutManager = LinearLayoutManager(this.context)
+
+		recyclerView.layoutManager = LinearLayoutManager(requireContext())
 		recyclerView.adapter = RecyclerViewAdapter()
 
 		return binding.root
