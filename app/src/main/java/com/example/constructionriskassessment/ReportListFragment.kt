@@ -1,7 +1,6 @@
 package com.example.constructionriskassessment
 
 import android.os.Bundle;
-import android.provider.ContactsContract.Data
 import android.view.LayoutInflater
 
 
@@ -12,21 +11,24 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.constructionriskassessment.database.Report
 import com.example.constructionriskassessment.database.ReportDatabase
 import com.example.constructionriskassessment.databinding.FragmentReportlistBinding
-import com.example.constructionriskassessment.databinding.FragmentRiskassessmentBinding
 
-class ReportListFragment: Fragment() {
+class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 	private lateinit var viewModel: ReportViewModel
 	private lateinit var recyclerView: RecyclerView
 	private lateinit var adapter: RecyclerViewAdapter
+	private lateinit var binding: FragmentReportlistBinding
+
+
 	override fun onCreateView(
 		inflater: LayoutInflater,
 		container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View? {
 		// Binding the fragment_reportlist layout
-		val binding = DataBindingUtil.inflate<FragmentReportlistBinding>(inflater, R.layout.fragment_reportlist, container, false)
+		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_reportlist, container, false)
 		// Assigning the recyclerview of the layout to a variable named recyclerView
 		recyclerView = binding.recyclerView1
 
@@ -37,7 +39,18 @@ class ReportListFragment: Fragment() {
 		// ViewModel instance
 		viewModel = ViewModelProvider(this,factory).get(ReportViewModel::class.java)
 
+
 		initRecyclerView()
+
+		binding.updateBtn.setOnClickListener {
+			val hazardEdTxt = binding.updateHazardTxt.text.toString()
+			val descEdTxt = binding.updateDescTxt.text.toString()
+			val sevEdTxt = binding.updateSevTxt.text.toString()
+
+			val report = Report(binding.updateHazardTxt.getTag(binding.updateHazardTxt.id).toString().toInt(),hazardEdTxt, descEdTxt, sevEdTxt)
+			viewModel.updateReport(report)
+		}
+
 		return binding.root
 	}
 
@@ -45,11 +58,12 @@ class ReportListFragment: Fragment() {
 		// Setting the recyclerView as a LinearLayout
 		recyclerView.layoutManager = LinearLayoutManager(requireContext())
 		// Assigning RecyclerViewAdapter as the adapter for this recyclerview
-		adapter  = RecyclerViewAdapter()
+		adapter = RecyclerViewAdapter(this)
 		recyclerView.adapter = adapter
-
 		displayReportList()
+
 	}
+
 
 	private fun displayReportList(){
 		viewModel.reports.observe(this,{
@@ -58,7 +72,20 @@ class ReportListFragment: Fragment() {
 		})
 	}
 
+	override fun onDeleteReportListener(report: Report) {
+		viewModel.deleteReport(report)
+	}
+
+	override fun onItemClickListener(report: Report) {
+		binding.updateHazardTxt.setText(report.typeOfHazard)
+		binding.updateHazardTxt.setTag(binding.updateHazardTxt.id, report.id)
+		binding.updateDescTxt.setText(report.description)
+		binding.updateSevTxt.setText(report.sev_level)
+
+		binding.updateBtn
+	}
 
 }
+
 	
 	

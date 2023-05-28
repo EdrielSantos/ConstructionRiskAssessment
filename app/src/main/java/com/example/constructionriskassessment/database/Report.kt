@@ -4,7 +4,6 @@ import android.widget.RadioButton
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Blob
 
 
 @Entity(tableName = "report_table")

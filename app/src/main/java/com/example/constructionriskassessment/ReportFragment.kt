@@ -1,7 +1,6 @@
 
 package com.example.constructionriskassessment
 
-import android.app.Application
 import android.os.Bundle;
 import android.view.LayoutInflater
 
@@ -15,10 +14,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.constructionriskassessment.ReportViewModelFactory
-import com.example.constructionriskassessment.ReportViewModel
 import com.example.constructionriskassessment.database.Report
-import com.example.constructionriskassessment.database.ReportDAO
 import com.example.constructionriskassessment.database.ReportDatabase
 import com.example.constructionriskassessment.databinding.FragmentReportBinding
 
