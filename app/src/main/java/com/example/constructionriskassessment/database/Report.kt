@@ -15,7 +15,9 @@ data class Report(
     @ColumnInfo(name = "report_description")
     val description: String,
     @ColumnInfo(name = "report_severity_level")
-    val sev_level: String
+    val sev_level: String,
+    @ColumnInfo(name = "report_image")
+    val image: ByteArray
 )
 
 

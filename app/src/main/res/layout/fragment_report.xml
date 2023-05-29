@@ -13,12 +13,11 @@
 			android:id="@+id/page_reportfragment_ek1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:background="@drawable/reportfragment"
+			android:background="@drawable/rectangle_13_shape"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent">
-
 
 			<TextView
 				android:id="@+id/send_your_report"
@@ -39,8 +38,25 @@
 				android:layout_marginTop="159dp"
 				android:background="@drawable/line_1_shape" />
 
+			<ImageView
+				android:id="@+id/displayImg"
+				android:src="@drawable/truck_1"
+				android:contentDescription="truck_1"
+				android:layout_marginStart="25dp"
+				android:layout_marginTop="165dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+			<ImageView
+				android:id="@+id/crackImg"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="500dp"
+				android:background="@drawable/crack_1"
+				/>
+
 			<Button
-				android:id="@+id/rectangle_9"
+				android:id="@+id/uploadBtn"
 				android:layout_width="168dp"
 				android:layout_height="152dp"
 				android:layout_marginStart="122dp"
@@ -49,7 +65,7 @@
 				android:contentDescription="rectangle_9" />
 
 			<TextView
-				android:id="@+id/upload_image"
+				android:id="@+id/uploadTxt"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="108dp"

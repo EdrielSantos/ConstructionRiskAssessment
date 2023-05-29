@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Report::class], version = 1)
+@Database(entities = [Report::class], version = 2)
 abstract class ReportDatabase: RoomDatabase() {
 
     abstract fun reportDao(): ReportDAO
@@ -16,7 +16,9 @@ abstract class ReportDatabase: RoomDatabase() {
             synchronized(this){
                 var instance = INSTANCE
                 if(instance==null){
-                    instance = Room.databaseBuilder(context.applicationContext, ReportDatabase::class.java, "Report Database").build()
+                    instance = Room.databaseBuilder(context.applicationContext, ReportDatabase::class.java, "Report Database")
+                        .fallbackToDestructiveMigration()
+                        .build()
                 }
                 return instance
             }

@@ -1,9 +1,12 @@
 package com.example.constructionriskassessment
 
+import android.graphics.BitmapFactory
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -57,11 +60,15 @@ class ViewHolder(private val view1:View, private val listener: RecyclerViewAdapt
         val myDescriptionTv = view1.findViewById<TextView>(R.id.list_desc)
         val mySevLvlTv = view1.findViewById<TextView>(R.id.list_sev)
         val deleteButton = view1.findViewById<Button>(R.id.del_btn)
+        val myImageView = view1.findViewById<ImageView>(R.id.list_img)
+        val bitmap = BitmapFactory.decodeByteArray(report.image, 0, report.image.size)
 
         myTextView.text = "Report ${report.id.toString()}"
         myHazardTv.text = "${report.typeOfHazard.toString()}"
         myDescriptionTv.text = "${report.description.toString()}"
         mySevLvlTv.text = "${report.sev_level.toString()}"
+        myImageView.setImageBitmap(bitmap)
+
 
         deleteButton.setOnClickListener {
             listener.onDeleteReportListener(report)

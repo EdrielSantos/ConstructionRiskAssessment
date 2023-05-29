@@ -1,5 +1,7 @@
 package com.example.constructionriskassessment
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle;
 import android.view.LayoutInflater
 
@@ -14,12 +16,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.constructionriskassessment.database.Report
 import com.example.constructionriskassessment.database.ReportDatabase
 import com.example.constructionriskassessment.databinding.FragmentReportlistBinding
+import java.io.ByteArrayOutputStream
 
 class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 	private lateinit var viewModel: ReportViewModel
 	private lateinit var recyclerView: RecyclerView
 	private lateinit var adapter: RecyclerViewAdapter
 	private lateinit var binding: FragmentReportlistBinding
+	private lateinit var bitmap: Bitmap
 
 
 	override fun onCreateView(
@@ -46,8 +50,12 @@ class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 			val hazardEdTxt = binding.updateHazardTxt.text.toString()
 			val descEdTxt = binding.updateDescTxt.text.toString()
 			val sevEdTxt = binding.updateSevTxt.text.toString()
+			val stream = ByteArrayOutputStream()
+			bitmap.compress(Bitmap.CompressFormat.PNG,100, stream)
+			val imageView = stream.toByteArray()
 
-			val report = Report(binding.updateHazardTxt.getTag(binding.updateHazardTxt.id).toString().toInt(),hazardEdTxt, descEdTxt, sevEdTxt)
+			val report = Report(binding.updateHazardTxt.getTag(binding.updateHazardTxt.id).toString().toInt()
+				,hazardEdTxt, descEdTxt, sevEdTxt, imageView)
 			viewModel.updateReport(report)
 		}
 
@@ -82,7 +90,9 @@ class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 		binding.updateDescTxt.setText(report.description)
 		binding.updateSevTxt.setText(report.sev_level)
 
-		binding.updateBtn
+		bitmap = BitmapFactory.decodeByteArray(report.image, 0, report.image.size)
+
+		binding.updateImg.setImageBitmap(bitmap)
 	}
 
 }
