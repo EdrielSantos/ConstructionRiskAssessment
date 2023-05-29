@@ -13,7 +13,7 @@
 			android:id="@+id/page_reportfragment_ek1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:background="@drawable/ReportFragment"
+			android:background="@drawable/reportfragment"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +98,7 @@
 				android:layout_marginStart="23dp"
 				android:layout_marginTop="460dp"
 				android:ems="17"
-				android:hint="Enter description"
+				android:hint="Enter a brief description"
 				android:inputType="text" />
 
 			<TextView
