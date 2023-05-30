@@ -37,7 +37,6 @@ class ReportFragment : Fragment() {
 		val IMAGE_REQUEST_CODE = 100
 	}
 
-
 	override fun onCreateView(
 		inflater: LayoutInflater,
 		container: ViewGroup?,
@@ -142,6 +141,5 @@ class ReportFragment : Fragment() {
 		bitmap.compress(Bitmap.CompressFormat.PNG,100, stream)
 		return stream.toByteArray()
 	}
-
 
 }
