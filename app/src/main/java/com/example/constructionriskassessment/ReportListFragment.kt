@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 
 import android.view.View;
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -46,17 +47,24 @@ class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 
 		initRecyclerView()
 
-		binding.updateBtn.setOnClickListener {
-			val hazardEdTxt = binding.updateHazardTxt.text.toString()
-			val descEdTxt = binding.updateDescTxt.text.toString()
-			val sevEdTxt = binding.updateSevTxt.text.toString()
-			val stream = ByteArrayOutputStream()
-			bitmap.compress(Bitmap.CompressFormat.PNG,100, stream)
-			val imageView = stream.toByteArray()
 
-			val report = Report(binding.updateHazardTxt.getTag(binding.updateHazardTxt.id).toString().toInt()
-				,hazardEdTxt, descEdTxt, sevEdTxt, imageView)
-			viewModel.updateReport(report)
+		binding.updateBtn.setOnClickListener {
+			if(binding.updateHazardTxt.text.isEmpty()){
+				Toast.makeText(requireContext(), "Please select an item to update first", Toast.LENGTH_SHORT).show()
+			}
+			else{
+				val hazardEdTxt = binding.updateHazardTxt.text.toString()
+				val descEdTxt = binding.updateDescTxt.text.toString()
+				val sevEdTxt = binding.updateSevTxt.text.toString()
+				val stream = ByteArrayOutputStream()
+				bitmap.compress(Bitmap.CompressFormat.PNG,100, stream)
+				val imageView = stream.toByteArray()
+
+				val report = Report(binding.updateHazardTxt.getTag(binding.updateHazardTxt.id).toString().toInt()
+					,hazardEdTxt, descEdTxt, sevEdTxt, imageView)
+
+				viewModel.updateReport(report)
+			}
 		}
 		return binding.root
 	}

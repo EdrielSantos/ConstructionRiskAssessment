@@ -11,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.View;
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -71,14 +73,17 @@ class ReportFragment : Fragment() {
 			} else {
 				saveReportData()
 				clearData()
+				Toast.makeText(requireContext(),"Submit successfully!", Toast.LENGTH_SHORT).show()
 			}
 		}
+
 		uploadBtn.setOnClickListener {
 			uploadImage()
 			uploadBtn.alpha = 0f
 			uploadBtn.isEnabled = true
 			uploadTxt.visibility = View.INVISIBLE
 		}
+
 		displayImage.setOnClickListener {
 			uploadImage()
 		}
