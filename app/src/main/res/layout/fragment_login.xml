@@ -82,13 +82,27 @@
 
 			<Button
 				android:id="@+id/login_btn"
-				android:layout_width="wrap_content"
+				android:layout_width="600dp"
 				android:layout_height="wrap_content"
-				android:layout_marginLeft="250dp"
-				android:layout_marginTop="500dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="525dp"
 				android:text="Login"
-				android:textColor="@color/login_ek3_color"
-				android:textSize="36sp" />
+				android:textColor="@color/white"
+				android:textSize="20sp"
+				android:background="@drawable/custom_button"/>
+
+			<Button
+				android:id="@+id/reg_btn"
+				android:layout_width="600dp"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="600dp"
+				android:text="Register"
+				android:textColor="@color/white"
+				android:textSize="20sp"
+				android:background="@drawable/custom_button"/>
 
 		</RelativeLayout>
 

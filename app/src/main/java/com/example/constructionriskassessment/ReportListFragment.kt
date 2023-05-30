@@ -58,7 +58,6 @@ class ReportListFragment: Fragment(), RecyclerViewAdapter.ItemClickListener{
 				,hazardEdTxt, descEdTxt, sevEdTxt, imageView)
 			viewModel.updateReport(report)
 		}
-
 		return binding.root
 	}
 
