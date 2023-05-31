@@ -47,4 +47,22 @@
             android:id="@+id/action_registrationFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.constructionriskassessment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.constructionriskassessment.FAQFragment"
+        android:label="fragment_f_a_q"
+        tools:layout="@layout/fragment_f_a_q" >
+        <action
+            android:id="@+id/action_FAQFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
 </navigation>

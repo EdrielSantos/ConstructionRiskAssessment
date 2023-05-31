@@ -38,4 +38,10 @@
     <string name="app_label">Construction Risk Assessment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">About</string>
+    <string name="faq">FAQ</string>
+    <string name="answer_1">Low Severity: Minimal impact, easily resolved without significant consequences. Medium Severity: Noticeable disruptions, require additional effort, time, or resources to address. High Severity: Major disruptions, substantial damage, or severe consequences, demanding immediate attention and substantial resources.</string>
+    <string name="question_2">What kind of information can I get from a construction risk assessment app?</string>
+    <string name="question_1">How are severity levels determined in construction risk assessment?</string>
+    <string name="answer_2">The construction risk assessment app presents images and brief descriptions of hazards, including falls, electrical hazards, equipment failure, structural instability, and hazardous materials. Each hazard is assigned a severity level, indicating the level of risk associated with it</string>
 </resources>
