@@ -1,6 +1,5 @@
 package com.example.constructionriskassessment.database
 
-import android.widget.RadioButton
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
